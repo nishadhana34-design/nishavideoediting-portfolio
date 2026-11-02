@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nishadhana | Video Editor Portfolio</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0910;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+header {
+    background: #17121f;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #30243b;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ff5ca8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff5ca8;
+}
+
+/* HOME */
+
+.home {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+    radial-gradient(circle at top left, #43204d, transparent 40%),
+    radial-gradient(circle at bottom right, #52213e, transparent 40%),
+    #0b0910;
+}
+
+.home h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.home h1 span {
+    color: #ff5ca8;
+}
+
+.home h2 {
+    color: #c4a7ff;
+    margin-bottom: 20px;
+}
+
+.home p {
+    color: #c4b9ca;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff5ca8, #a78bfa);
+    color: white;
+    padding: 13px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px #ff5ca8;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 40px;
+    color: #ff5ca8;
+}
+
+/* ABOUT */
+
+.about-content {
+    background: #17121f;
+    padding: 35px;
+    border-radius: 15px;
+    line-height: 2;
+    color: #c4b9ca;
+}
+
+/* SKILLS */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    background: #17121f;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #51334f;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-8px);
+    border-color: #ff5ca8;
+}
+
+/* SOFTWARE */
+
+.software {
+    text-align: center;
+    background: #17121f;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 22px;
+    color: #ff8cc0;
+    line-height: 2;
+}
+
+/* PROJECTS */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: #17121f;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #30243b;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff5ca8;
+}
+
+.project-image {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #542442, #30204e);
+    font-size: 50px;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    color: #ff5ca8;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    color: #c4b9ca;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.project-info strong {
+    color: #c4a7ff;
+}
+
+/* EXPERIENCE */
+
+.education-box {
+    background: #17121f;
+    padding: 30px;
+    border-left: 5px solid #ff5ca8;
+    border-radius: 10px;
+    line-height: 2;
+    color: #c4b9ca;
+}
+
+/* EDUCATION */
+
+.education-box h3 {
+    color: #ff5ca8;
+    margin-bottom: 10px;
+}
+
+/* CAREER */
+
+.career {
+    background: #17121f;
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 2;
+    color: #c4b9ca;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    background: #17121f;
+    padding: 40px;
+    border-radius: 15px;
+    line-height: 2.5;
+}
+
+.contact a {
+    color: #ff5ca8;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    background: #17121f;
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    .home h1 {
+        font-size: 38px;
+    }
+
+    .skills,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="container nav">
+
+    <div class="logo">NISHADHANA.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</div>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="home" id="home">
+
+<div>
+
+    <h1>Hello, I'm <span>NISHADHANA</span></h1>
+
+    <h2 id="typing">Video Editor</h2>
+
+    <p>
+        Creative Video Editor | Reels & Shorts Editor<br>
+        Turning creative ideas into engaging videos.
+    </p>
+
+    <a href="#projects" class="btn">
+        Explore My Work
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+    <h2 class="title">About Me</h2>
+
+    <div class="about-content">
+
+        <p>
+        I am a creative and passionate aspiring Video Editor
+        with a strong interest in social media content creation
+        and visual storytelling.
+
+        I have experience practising mobile video editing
+        using InShot.
+
+        I am interested in creating engaging Instagram Reels,
+        YouTube Shorts and promotional videos.
+
+        I enjoy experimenting with creative transitions,
+        music synchronization, text animations and visual effects.
+
+        I am eager to improve my editing skills and gain
+        practical experience in the video editing industry.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="container">
+
+    <h2 class="title">My Editing Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">Short-form Video Editing</div>
+
+        <div class="skill">Instagram Reels Editing</div>
+
+        <div class="skill">YouTube Shorts Editing</div>
+
+        <div class="skill">Creative Transitions</div>
+
+        <div class="skill">Text Animation</div>
+
+        <div class="skill">Audio Synchronization</div>
+
+        <div class="skill">Video Trimming</div>
+
+        <div class="skill">Colour Correction</div>
+
+        <div class="skill">Visual Storytelling</div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- SOFTWARE -->
+
+<section>
+
+<div class="container">
+
+    <h2 class="title">Software & Tools</h2>
+
+    <div class="software">
+
+        🎬 InShot – Mobile Video Editing<br>
+
+        🎨 Canva – Graphic Design & Video Content
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+    <h2 class="title">My Projects</h2>
+
+    <p style="text-align:center;color:#c4b9ca;margin-bottom:35px;">
+        Personal Editing Projects – Selected Mobile Video Editing Work
+    </p>
+
+    <div class="projects">
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+            <div class="project-image">🎬</div>
+
+            <div class="project-info">
+
+                <h3>Instagram Reels Editing</h3>
+
+                <p>
+                    Short-form video editing with creative cuts,
+                    transitions and music synchronization.
+                </p>
+
+                <p><strong>App Used:</strong> InShot</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+            <div class="project-image">▶️</div>
+
+            <div class="project-info">
+
+                <h3>YouTube Shorts</h3>
+
+                <p>
+                    Short video editing with trimming,
+                    text animations and engaging transitions.
+                </p>
+
+                <p><strong>App Used:</strong> InShot</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="project-card">
+
+            <div class="project-image">🎵</div>
+
+            <div class="project-info">
+
+                <h3>Music Video Editing</h3>
+
+                <p>
+                    Music synchronization, beat-based cuts,
+                    transitions and audio adjustments.
+                </p>
+
+                <p><strong>App Used:</strong> InShot</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 4 -->
+
+        <div class="project-card">
+
+            <div class="project-image">✨</div>
+
+            <div class="project-info">
+
+                <h3>Creative Video Editing</h3>
+
+                <p>
+                    Creative transitions, visual effects,
+                    video trimming and colour adjustments.
+                </p>
+
+                <p><strong>App Used:</strong> InShot</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 5 -->
+
+        <div class="project-card">
+
+            <div class="project-image">📱</div>
+
+            <div class="project-info">
+
+                <h3>Social Media Content</h3>
+
+                <p>
+                    Editing social media videos with
+                    attractive text, layouts and animations.
+                </p>
+
+                <p><strong>App Used:</strong> Canva</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 6 -->
+
+        <div class="project-card">
+
+            <div class="project-image">🌟</div>
+
+            <div class="project-info">
+
+                <h3>Promotional Video Editing</h3>
+
+                <p>
+                    Practising promotional video creation
+                    with cuts, text overlays and music.
+                </p>
+
+                <p><strong>App Used:</strong> InShot</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container">
+
+    <h2 class="title">Experience</h2>
+
+    <div class="education-box">
+
+        <h3>Personal Editing Projects</h3>
+
+        <p>
+            Practising mobile video editing using InShot.
+        </p>
+
+        <p>
+            Creating short-form social media content.
+        </p>
+
+        <p>
+            Experimenting with transitions, effects,
+            music and text animations.
+        </p>
+
+        <p>
+            Developing creative storytelling and
+            video editing techniques.
+        </p>
+
+        <p>
+            Currently building a video editing portfolio
+            through personal projects.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="container">
+
+    <h2 class="title">Education</h2>
+
+    <div class="education-box">
+
+        <h3>Sri Venkateswara College of Engineering</h3>
+
+        <p>Bachelor of Engineering (B.E.)</p>
+
+        <p>Computer Science and Engineering</p>
+
+        <p>Currently Pursuing</p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CAREER OBJECTIVE -->
+
+<section>
+
+<div class="container">
+
+    <h2 class="title">Career Objective</h2>
+
+    <div class="career">
+
+        Seeking an opportunity as a Junior Video Editor
+        or Video Editor Intern where I can apply my creativity,
+        develop my technical editing skills and gain
+        hands-on experience in the video editing industry.
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+    <h2 class="title">Contact Me</h2>
+
+    <div class="contact">
+
+        <p>📍 Tamil Nadu, India</p>
+
+        <p>
+            ✉️ Email:
+            <a href="mailto:nishadhana34@gmail.com">
+                nishadhana34@gmail.com
+            </a>
+        </p>
+
+        <p>
+            📞 Phone:
+            <a href="tel:9344937590">
+                9344937590
+            </a>
+        </p>
+
+        <p>
+            🔗 LinkedIn:
+            <a href="https://www.linkedin.com/public-profile/settings/"
+               target="nishadhana-suresh-014753437">
+                LinkedIn Profile
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Nishadhana | Video Editor Portfolio
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const roles = [
+    "Video Editor",
+    "Reels & Shorts Editor",
+    "Social Media Content Creator",
+    "Creative Video Editor"
+];
+
+let index = 0;
+
+setInterval(function() {
+
+    index = (index + 1) % roles.length;
+
+    document.getElementById("typing").textContent =
+    roles[index];
+
+}, 2000);
+
+</script>
+
+</body>
+</html>
